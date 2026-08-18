@@ -1086,6 +1086,17 @@ MODEL_REGISTRY: list[RegisteredModel] = [
         status=_EARLY_ACCESS,
         arena_enabled=False,
     ),
+    # TODO: promote to _EARLY_ACCESS once ATLAS_API_KEY is mounted in infra.
+    RegisteredModel(
+        benchmark=_TTS,
+        provider="atlas",
+        model="atlas-tts",
+        voice="dax",
+        tags=(_STREAMING, _MULTI, _CLONE, _EMOTION, _STREAM),
+        region="us",
+        status=_PENDING,
+        arena_enabled=False,
+    ),
     # gpt-realtime is a speech-to-speech LLM, not a TTS provider: driving it
     # from a text "instructions" prompt folds LLM inference into TTFA and never
     # guarantees verbatim speech, so its metrics are incomparable here. Kept
