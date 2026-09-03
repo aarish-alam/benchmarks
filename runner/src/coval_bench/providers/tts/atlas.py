@@ -85,8 +85,8 @@ class AtlasTTSProvider(TTSProvider):
         self._voice = voice
 
         if self._voice not in VALID_VOICES:
-            logger.warning("unknown_atlas_voice", voice=self._voice, fallback="dax")
-            self._voice = "dax"
+            logger.warning("unknown_atlas_voice", voice=self._voice, fallback="capella")
+            self._voice = "capella"
 
         api_key_secret = settings.atlas_api_key
         if api_key_secret is None or not api_key_secret.get_secret_value():
