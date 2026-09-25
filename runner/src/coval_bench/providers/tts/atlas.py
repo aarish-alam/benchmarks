@@ -66,7 +66,7 @@ VALID_VOICES = [
 # leading-silence offset we publish.
 SAMPLE_RATE = 24000
 
-_WS_URL = "wss://api.tts.runatlas.com/v1/audio/speech/stream"
+_WS_URL = "wss://api-useast.tts.runatlas.com/v1/audio/speech/stream"
 _MAX_WS_SIZE = 16 * 1024 * 1024
 _LAST_FRAMES_KEPT = 3
 
